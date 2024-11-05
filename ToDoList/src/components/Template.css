@@ -1,0 +1,38 @@
+header nav{
+    display: flex;
+    flex-direction: row;
+    background-color: antiquewhite;
+}
+.list{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    
+}
+li :hover{
+    text-decoration: underline;
+    
+}
+h1{
+    text-align: center;
+    text-decoration:  underline violet ;
+}
+footer ul{
+    gap: 20px;
+    list-style: none;
+}
+footer{
+    background-color: antiquewhite;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    
+}
+main{
+    border: 1px solid green;
+    margin-bottom: 50px;
+    padding: 10px;
+
+}
+
