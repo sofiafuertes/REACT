@@ -2,11 +2,23 @@
     background-color: antiquewhite;
     text-align: left;
     padding-left: 20px;
-    
 }
+.homme{
+        background-color: lightblue;
+    }
+    
+.femme{
+        background-color: pink;
+    }
+    
+.non-binaire{
+        background-color: lemonchiffon;
+    }
+
 img{
     float: left;
     width: 150px;
     border: 1px solid black;
     margin-right: 10px;
 }
+

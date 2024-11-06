@@ -13,13 +13,14 @@ import "./Card.css";
 //     )
 // }
 
-function Card({ image, pseudo, email, description }) {
+function Card({ image, pseudo, sexe, email, description }) {
     return (
         <>
-            <article className="card">
+            <article className={sexe}>
                 <img src={image} alt="profil photo" />
                 <h2>{pseudo}</h2>
                 <h3>{email}</h3>
+                <p>{sexe}</p>
                 <p>{description}</p>
             </article>
         </>
