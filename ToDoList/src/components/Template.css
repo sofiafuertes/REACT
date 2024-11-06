@@ -1,7 +1,13 @@
+*{
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+}
 header nav{
     display: flex;
     flex-direction: row;
     background-color: antiquewhite;
+}
+.header{
+    font-size: 2rem;
 }
 .list{
     display: flex;

@@ -37,7 +37,7 @@ function App() {
     let count = 0;
 
     for (let i = 1; i <= 31; i++) {
-        ROW.push(<Day key={count++} jour={i} className="backgroundOrange" />);
+        ROW.push(<Day key={count++} jour={i} className={"backgroundOrange"} />);
     }
 
     return (
