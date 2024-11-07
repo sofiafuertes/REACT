@@ -1,29 +1,69 @@
 import "./Card.css";
+import Like from "./Like.jsx"
 
-// function Card(){
+// function Card({ image, pseudo, sexe, email, description }) {
 //     return (
 //         <>
-//         <article className="card">
-//             <img src="https://plus.unsplash.com/premium_photo-1689551670902-19b441a6afde?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="profil photo" />
-//         <h2>Gloria</h2>
-//         <h3>gloria96@gmail.com</h3>
-//         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque earum dolore consequatur provident consequuntur id odit, veritatis consectetur perferendis temporibus dignissimos commodi tempore in reiciendis possimus vel eum suscipit quae!</p>
-//         </article>
+//             <article className={sexe}>
+//                 <img src={image} alt="profil photo" />
+//                 <h2>{pseudo}</h2>
+//                 <h3>{email}</h3>
+//                 <p>{sexe}</p>
+//                 <p>{description}</p>
+//             </article>
 //         </>
-//     )
+//     );
 // }
 
-function Card({ image, pseudo, sexe, email, description }) {
+function Card({ image, pseudo, email, description, sexe }) {
+    let color = "";
+    switch (sexe) {
+        case "homme":
+            color = "lightblue";
+            break;
+        case "femme":
+            color = "pink";
+            break;
+        case "non-binaire":
+            color = "lemonchiffon";
+            break;
+    }
+
     return (
-        <>
-            <article className={sexe}>
-                <img src={image} alt="profil photo" />
-                <h2>{pseudo}</h2>
-                <h3>{email}</h3>
-                <p>{sexe}</p>
-                <p>{description}</p>
-            </article>
-        </>
+        <article
+            className={color + " card"}
+            onMouseOver={(event) => event.target.classList.add("border")}
+            onMouseLeave={(event) => event.target.classList.remove("border")}
+        >
+            <img
+                onMouseOver={(event) => event.stopPropagation()}
+                onMouseLeave={(event) => event.stopPropagation()}
+                src={image}
+                alt="photo profil"
+            />
+            <h2
+                onMouseOver={(event) => event.stopPropagation()}
+                onMouseLeave={(event) => event.stopPropagation()}
+            >
+                {" "}
+                {pseudo}
+            </h2>
+            <h3
+                onMouseOver={(event) => event.stopPropagation()}
+                onMouseLeave={(event) => event.stopPropagation()}
+            >
+                {" "}
+                {email}
+            </h3>
+            <p
+                onMouseOver={(event) => event.stopPropagation()}
+                onMouseLeave={(event) => event.stopPropagation()}
+            >
+                {" "}
+                {description}
+            </p>
+            <Like />
+        </article>
     );
 }
 

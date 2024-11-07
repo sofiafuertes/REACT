@@ -31,14 +31,24 @@ const USERS = [
     },
 ];
 
+
+
+
 function App() {
+    const [search, setSearch] = useState("")
+
+    const USERS_LIST = filter(element=>{
+        if(!element.pseudo.includes(search)){
+            return false
+        }else{
+            return true
+        }
+    })
+
     return (
         <>
-            {USERS > 0 ? (
-                <h1>Liste des utilisateurs</h1>
-            ) : (
-                <h1>Aucun utilisateur d'inscrit </h1>
-            )}
+        <input type="text" onChange={event=>setSearch(event.target.value)} />
+            {USERS.length > 0 ? <h1>Liste des utilisateurs</h1> : <h1>Aucun utilisateur d'inscrit </h1> }
             {USERS.length > 0 && (
                 <p>il y a {USERS.length} utilisateurs inscrits!</p>
             )}
@@ -52,6 +62,7 @@ function App() {
                     description={user["description"]}
                 />
             ))}
+
         </>
     );
 }
