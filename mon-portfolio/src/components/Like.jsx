@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Like.css"
+import "../style/Like.css"
 
 function Like(){
     const [like, setLike] = useState(56)

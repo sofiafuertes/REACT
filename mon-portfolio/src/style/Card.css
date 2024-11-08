@@ -1,0 +1,28 @@
+.card{
+    background-color: antiquewhite;
+    text-align: left;
+    padding-left: 20px;
+    margin: 15px
+}
+.lightblue{
+    background-color: lightblue;
+}
+
+.pink{
+    background-color: pink;
+}
+
+.lemonchiffon{
+    background-color: lemonchiffon;
+}
+
+img{
+    float: left;
+    width: 150px;
+    border: 1px solid black;
+    margin-right: 10px;
+}
+
+.border{
+    border: 3px solid red;
+}

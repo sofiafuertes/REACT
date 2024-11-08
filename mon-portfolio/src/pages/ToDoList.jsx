@@ -1,8 +1,6 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import Template from "./components/Template";
+import Template from "../components/Template";
+import '../style/ToDoList.css'
 
 const TODOS = [
     {
@@ -35,8 +33,10 @@ const TODOS = [
     },
 ];
 
-function App() {
 
+
+
+function ToDoList(){
     const [todo,setTodo] = useState(TODOS)
     
     console.log(todo)
@@ -87,15 +87,15 @@ function App() {
                     <input
                         type="checkbox" name="PHP" checked={PHP} onChange={() => setPHP(!PHP)}
                     />
-                    <label for="PHP">PHP</label>
+                    <label htmlFor="PHP">PHP</label>
                     <input
                         type="checkbox" name="JavaScript" checked={JavaScript} onChange={() => setJavaScript(!JavaScript)}
                     />
-                    <label for="PHP">JavaScript</label>
+                    <label htmlFor="PHP">JavaScript</label>
                     <input
                         type="checkbox" name="React" checked={React} onChange={() => setReact(!React)} 
                     />
-                    <label for="PHP">React</label>
+                    <label htmlFor="PHP">React</label>
                 </section>
                 <ul>
                     {TODOLIST.map((todo) => (
@@ -112,7 +112,9 @@ function App() {
             </Template>
         </>
     );
+
 }
+
 
 function ToDo({ todo, date, checked, heureRestante }) {
     const [heure, setHeure] = useState(heureRestante);
@@ -201,4 +203,5 @@ function Form({ onSubmit }) {
 //     );
 // }
 
-export default App;
+
+export default ToDoList

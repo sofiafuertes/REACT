@@ -1,9 +1,5 @@
+import Card from "../components/Card.jsx"
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import Card from "./Card.jsx";
-
 const USERS = [
     {
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzfEXllGKVMSda3spz8TRTiZP8DNLkWVY3S1rKOIqwXUxpLT0UmB-Hc3GtpSM4fTkH6cc&usqp=CAU",
@@ -28,7 +24,7 @@ const USERS = [
     },
 ];
 
-function App() {
+function CardUser(){
     const [search, setSearch] = useState("");
 
     const USERS_LIST = USERS.filter((element) => {
@@ -69,7 +65,7 @@ function App() {
                 />
             ))}
         </>
-    );
+    )
 }
 
-export default App;
+export default CardUser
